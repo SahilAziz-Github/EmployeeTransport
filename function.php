@@ -117,7 +117,7 @@ $data[] = $cd;
 
 
 
-function renttakerdataread()
+function customerdataread()
 
 {
 
@@ -127,32 +127,30 @@ global $data;
 
 
 
-$connect = mysqli_connect( "localhost", "root", "","final_project");
+$connect = mysqli_connect( "localhost", "root", "","transporter");
 
-$sql=" select * from renttakerinfo ";
+$sql=" select * from customerinfo ";
 
 $result = mysqli_query($connect,$sql) or die  ( mysqli_error($connect)  );
 
 while ($row = mysqli_fetch_assoc($result)  ) 
 {
 
-$cd["FirstName"]=$row["FirstName"];
+$cd["FirstName"]=$row["firstName"];
 
-$cd["LastName"]=$row["LastName"];
+$cd["LastName"]=$row["lastName"];
 
-$cd["UserName"]=$row["UserName"];
+$cd["UserName"]=$row["userName"];
 
-$cd["Phone"]=$row["Phone"];
+$cd["Phone"]=$row["phone"];
 
-$cd["Email"]=$row["Email"];
+$cd["Email"]=$row["email"];
 
-$cd["Password"]=$row["Password"];
+$cd["Password"]=$row["password"];
 
-$cd["Gender"]=$row["Gender"];
+$cd["Gender"]=$row["gender"];
 
-$cd["Occupation"]=$row["Occupation"];
-
-$cd["UserType"]=$row["UserType"];
+$cd["UserType"]=$row["userType"];
 
 
 $data[] = $cd;
@@ -168,7 +166,7 @@ $data[] = $cd;
 
 
 
-function rentgiverdataread()
+function serviceproviderdataread()
 
 {
 
@@ -179,32 +177,30 @@ function rentgiverdataread()
 
 
 
-$connect = mysqli_connect( "localhost", "root", "","final_project");
+$connect = mysqli_connect( "localhost", "root", "","transporter");
 
-$sql=" select * from rentgiverinfo ";
+$sql=" select * from serviceproinfo ";
 
 $result = mysqli_query($connect,$sql) or die  ( mysqli_error($connect)  );
 
 while ($row = mysqli_fetch_assoc($result)  ) 
 {
 
-$cd["FirstName"]=$row["FirstName"];
+$cd["FirstName"]=$row["firstName"];
 
-$cd["LastName"]=$row["LastName"];
+$cd["LastName"]=$row["lastName"];
 
-$cd["UserName"]=$row["UserName"];
+$cd["UserName"]=$row["userName"];
 
-$cd["Phone"]=$row["Phone"];
+$cd["Phone"]=$row["phone"];
 
-$cd["Email"]=$row["Email"];
+$cd["Email"]=$row["email"];
 
-$cd["Password"]=$row["Password"];
+$cd["Password"]=$row["password"];
 
-$cd["Gender"]=$row["Gender"];
+$cd["Gender"]=$row["gender"];
 
-$cd["Occupation"]=$row["Occupation"];
-
-$cd["UserType"]=$row["UserType"];
+$cd["UserType"]=$row["userType"];
 
 
 $data[] = $cd;

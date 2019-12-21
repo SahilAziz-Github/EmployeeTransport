@@ -102,7 +102,7 @@ if( pError == 1  )
 
     
        document.getElementById("una").innerHTML="";
-       document.getElementById("haha").innerHTML="Wrong creadianal";
+       document.getElementById("haha").innerHTML="Wrong credentials";
        document.getElementById("haha").style.color="red";
     
 }
@@ -220,7 +220,7 @@ foreach ($temp as $k => $v) {
 
       if ($temp["subscription"] =="yes")
       {
-      header("Location:fake.php");
+      header("Location:customerhome.php");
       }
       else
       {
@@ -246,7 +246,7 @@ foreach ($temp as $k => $v) {
       
      }
     
-     if ($cred[$k]=="Admin") 
+     if ($cred[$k]=="admin") 
      {
 
       global $flag;
@@ -298,7 +298,7 @@ foreach ($temp as $k => $v) {
 
   </form>
 
-  <a href="F.html" title=""  style="width: 97%;background-color: #4CAF50;color: white;padding: 14px 20px;margin: 8px 0;border: none;
+  <a href="index.html" title=""  style="width: 97%;background-color: #4CAF50;color: white;padding: 14px 20px;margin: 8px 0;border: none;
    border-radius: 4px; cursor: pointer;text-align:center;text-decoration: none;float: left;">Back</a><br><br><br>
 
 </div>
