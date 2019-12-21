@@ -102,6 +102,49 @@ $data[] = $cd;
 }
 
 
+function pendingrequestdataread()
+
+{
+
+
+global $data;
+
+
+
+
+$connect = mysqli_connect( "localhost", "root", "","transporter");
+
+$sql=" select * from login ";
+
+$result = mysqli_query($connect,$sql) or die  ( mysqli_error($connect)  );
+
+while ($row = mysqli_fetch_assoc($result)  ) 
+{
+
+$cd["userName"]=$row["userName"];
+
+$cd["password"]=$row["password"];
+
+$cd["uType"]=$row["uType"];
+
+$cd["status"]=$row["status"];
+
+
+
+
+$data[] = $cd;
+
+
+
+}
+
+}
+
+
+
+
+
+
 
 
 function customerdataread()
