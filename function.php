@@ -61,7 +61,7 @@ $temp[] = $row ;
 
 
 
-function propertydataRead()
+function bookingdataRead()
 {
 
 
@@ -70,40 +70,27 @@ global $data;
 
 
 
-$connect = mysqli_connect( "localhost", "root", "","final_project");
+$connect = mysqli_connect( "localhost", "root", "","transporter");
 
-$sql=" select * from propertyinfo ";
+$sql=" select * from booking ";
 
 $result = mysqli_query($connect,$sql) or die  ( mysqli_error($connect)  );
 
 while ($row = mysqli_fetch_assoc($result)  ) 
 {
 
-$proID = trim( $row["PropertyID"] );
-$unam = trim( $row["UserName"] );
 
 
-$cd["UserName"]=$unam;
+$cd["userName"]=$row["userName"];
 
-$cd["Price"]=$row["Price"];
+$cd["carName"]=$row["carName"];
 
-$cd["Phone"]=$row["Phone"];
+$cd["driverName"]=$row["driverName"];
 
-$cd["Email"]=$row["Email"];
+$cd["departureTime"]=$row["departureTime"];
 
-$cd["Area"]=$row["Area"];
+$cd["departureLocation"]=$row["departureLocation"];
 
-$cd["Address"]=$row["Address"];
-
-$cd["Room"]=$row["Room"];
-
-$cd["Size"]=$row["Size"];
-
-$cd["Floor"]=$row["Floor"];
-
-$cd["Image"]=$row["Image"];
-
-$cd["PropertyID"]=$proID;
 
 
 $data[] = $cd;
