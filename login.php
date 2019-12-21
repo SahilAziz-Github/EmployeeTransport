@@ -222,7 +222,7 @@ foreach ($temp as $k => $v) {
        
         }
 
-        if ($temp["subscription"] =="yes")
+        if ($temp["subscription"] =="valid")
         {
         header("Location:customerhome.php");
         }

@@ -241,16 +241,45 @@ $cd["UserType"]=$row["userType"];
 $data[] = $cd;
 
 
+}
+
+}
+
+function subscriptiondataread()
+
+{
 
 
+global $data;
+
+
+
+
+$connect = mysqli_connect( "localhost", "root", "","transporter");
+
+$sql=" select * from customerinfo ";
+
+$result = mysqli_query($connect,$sql) or die  ( mysqli_error($connect)  );
+
+while ($row = mysqli_fetch_assoc($result)  ) 
+{
+
+$cd["userName"]=$row["userName"];
+
+$cd["uType"]=$row["userType"];
+
+$cd["subscription"]=$row["subscription"];
+
+
+
+
+$data[] = $cd;
 
 
 
 }
 
-
 }
-
 
 
 

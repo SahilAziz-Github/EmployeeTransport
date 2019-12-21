@@ -14,8 +14,10 @@
 <td ><a href="route.php"> Route </a></td>
 <td ><a href="profile.php"> Profile </a></td>
 <td > <a href="subscribe.php"> Subscribe! </a></td>
+<td> <a href="changepasscustomer.php"> Change Password </a></td>
 <td> <a href="comment.php"> comment </a></td>
 <td><a href="login.php"> Log Out </a></td>
+
 </tr>
 </table>
 

@@ -59,9 +59,9 @@ $subscription = "no";
 
 $connect = mysqli_connect( "localhost", "root", "","transporter");
 
-$sql=" insert into customerinfo values ('".  $_POST["fname"]      ."','".   $_POST["lname"]       ."','".  $_POST["uname"]        ."','".   $_POST["phon"]          ."',
+$sql=" insert into customerinfo values ('".$_POST["fname"]."','".$_POST["lname"]."','".$_POST["uname"]."','".$_POST["phon"]."',
 
-'".   $_POST["email"]       ."','".  md5($_POST["pass"])     ."','".   $_POST["group1"]       ."','".   $_POST["utype"]       ."' ,'".$subscription."'
+'".$_POST["email"]."','".md5($_POST["pass"])."','".$_POST["group1"]."','".$_POST["utype"]."' ,'".$subscription."'
 
 ) ";
 
@@ -90,9 +90,9 @@ if($_POST["utype"]=="service")
 
 $connect = mysqli_connect( "localhost", "root", "","transporter");
 
-$sql=" insert into serviceproinfo values ('".  $_POST["fname"]      ."','".   $_POST["lname"]       ."','".  $_POST["uname"]        ."','".   $_POST["phon"]          ."',
+$sql=" insert into serviceproinfo values ('".$_POST["fname"]."','".$_POST["lname"]."','".$_POST["uname"]."','".$_POST["phon"]."',
 
-'".   $_POST["email"]       ."','".  md5($_POST["pass"])     ."','".   $_POST["group1"]       ."','".   $_POST["utype"]       ."'
+'".$_POST["email"]."','".md5($_POST["pass"])."','".$_POST["group1"]."','".$_POST["utype"]."'
 
 ) ";
 
@@ -106,7 +106,7 @@ $stat= 0;
 
 $connect = mysqli_connect( "localhost", "root", "","transporter");
 
-$sql=" insert into login values (' ".  $_POST["uname"]        ." ' ,' ".  md5($_POST["pass"])     ." ' , ' ".   $_POST["utype"]       ." ',".$stat."
+$sql=" insert into login values ('".$_POST["uname"]."' ,'".md5($_POST["pass"])."' ,'".$_POST["utype"]."',".$stat."
 
 ) ";
 

@@ -526,7 +526,13 @@ foreach ($data as  $v)
    border-radius: 4px; cursor: pointer;text-align:center;text-decoration: none;float: left;">Check History</a><br><br><br>
 
 <a href="seerequest.php"  style="width: 97%;background-color: #4CAF50;color: white;padding: 14px 20px;margin: 8px 0;border: none;
-   border-radius: 4px; cursor: pointer;text-align:center;text-decoration: none;float: left;">Pending Requests</a><br><br><br>
+   border-radius: 4px; cursor: pointer;text-align:center;text-decoration: none;float: left;">Pending Account Requests</a><br><br><br>
+
+<a href="changepassadmin.php"  style="width: 97%;background-color: #4CAF50;color: white;padding: 14px 20px;margin: 8px 0;border: none;
+   border-radius: 4px; cursor: pointer;text-align:center;text-decoration: none;float: left;">Change Password</a><br><br><br>
+
+<a href="subscriptionrequest.php"  style="width: 97%;background-color: #4CAF50;color: white;padding: 14px 20px;margin: 8px 0;border: none;
+   border-radius: 4px; cursor: pointer;text-align:center;text-decoration: none;float: left;">Pending Subscription Requests</a><br><br><br>
 
 
 
