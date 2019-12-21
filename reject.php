@@ -1,6 +1,5 @@
 <?php
 
-$up= "yes";
 
 $connect = mysqli_connect( "localhost", "root", "","transporter");
 
@@ -18,7 +17,7 @@ $result = mysqli_query($connect,$sql) or die  ( mysqli_error($connect)  );
 
 
 
-echo "<h3 style='color:green'>Update  Successfull.</h3>";
+echo "<script>alert('Account Request Rejected ');</script>";
 
 header("location:seerequest.php");
 ?>

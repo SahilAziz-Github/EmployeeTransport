@@ -125,6 +125,10 @@ id="utist" name="ulist">
   background-color: #4CAF50;
   color: white;">User Type:</th>
 
+  <th style="border: 1px solid #ddd; padding: 8px;padding-top: 12px;padding-bottom: 12px;text-align: left;
+  background-color: #4CAF50;
+  color: white;">Delete Account:</th>
+
 
 
 
@@ -177,6 +181,12 @@ if ($_POST["uname"] == $v["UserName"]  )
      <td style="border: 1px solid #ddd; padding: 8px;"><?php  echo $v["Gender"];   ?></td>
   <!--   <td style="border: 1px solid #ddd; padding: 8px;"><?php  //echo $v["Occupation"];   ?></td> -->
      <td style="border: 1px solid #ddd; padding: 8px;"><?php  echo $v["UserType"];   ?></td>
+     <td style="border: 1px solid #ddd; padding: 8px;"><a style='text-decoration:none;color:green;' href='delete.php?d=<?php echo $v["UserName"] ; ?> ' >
+
+    
+
+     Delete</a></td>
+
      
 
  </tr>
@@ -255,7 +265,11 @@ if ($_POST["uname"] == $v["UserName"]  )
      <td style="border: 1px solid #ddd; padding: 8px;"><?php  echo $v["Gender"];   ?></td>
    <!--  <td style="border: 1px solid #ddd; padding: 8px;"><?php // echo $v["Occupation"];   ?></td> -->
      <td style="border: 1px solid #ddd; padding: 8px;"><?php  echo $v["UserType"];   ?></td>
-     
+    <td style="border: 1px solid #ddd; padding: 8px;"><a style='text-decoration:none;color:green;' href='delete.php?d=<?php echo $v["UserName"] ; ?> ' >
+
+    
+
+     Delete</a></td>
 
  </tr>
 
@@ -329,7 +343,12 @@ foreach ($data as  $v)
     <td style="border: 1px solid #ddd; padding: 8px;"><?php  echo $v["Email"];   ?></td>
      <td style="border: 1px solid #ddd; padding: 8px;"><?php  echo $v["Gender"];   ?></td>
      <td style="border: 1px solid #ddd; padding: 8px;"><?php  echo $v["UserType"];   ?></td>
-     
+     <td style="border: 1px solid #ddd; padding: 8px;"><a style='text-decoration:none;color:green;' href='delete.php?d=<?php echo $v["UserName"] ; ?> ' >
+
+    
+
+     Delete</a></td>
+
 
  </tr>
 
@@ -395,7 +414,12 @@ foreach ($data as  $v)
     <td style="border: 1px solid #ddd; padding: 8px;"><?php  echo $v["Email"];   ?></td>
      <td style="border: 1px solid #ddd; padding: 8px;"><?php  echo $v["Gender"];   ?></td>
      <td style="border: 1px solid #ddd; padding: 8px;"><?php  echo $v["UserType"];   ?></td>
-     
+     <td style="border: 1px solid #ddd; padding: 8px;"><a style='text-decoration:none;color:green;' href='delete.php?d=<?php echo $v["UserName"] ; ?> ' >
+
+    
+
+     Delete</a></td>
+
 
  </tr>
 
@@ -462,7 +486,12 @@ foreach ($data as  $v)
     <td style="border: 1px solid #ddd; padding: 8px;"><?php  echo $v["Email"];   ?></td>
      <td style="border: 1px solid #ddd; padding: 8px;"><?php  echo $v["Gender"];   ?></td>
      <td style="border: 1px solid #ddd; padding: 8px;"><?php  echo $v["UserType"];   ?></td>
-     
+     <td style="border: 1px solid #ddd; padding: 8px;"><a style='text-decoration:none;color:green;' href='delete.php?d=<?php echo $v["UserName"] ; ?> ' >
+
+    
+
+     Delete</a></td>
+
 
  </tr>
 

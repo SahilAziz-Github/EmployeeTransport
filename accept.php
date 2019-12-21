@@ -18,7 +18,7 @@ $result = mysqli_query($connect,$sql) or die  ( mysqli_error($connect)  );
 
 
 
-echo "<h3 style='color:green'>Update  Successfull.</h3>";
+echo "<script>alert('Account Confirmation Successful ');</script>";
 
 header("location:seerequest.php");
 ?>
