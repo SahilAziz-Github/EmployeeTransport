@@ -8,31 +8,24 @@ if(isset($_COOKIE["valid"]) && $_COOKIE["valid"]=="yes")
 ?>
 
 
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<center>
+	<table height="500px" width="500px">
 
-<?php
-
-$up= "valid";
-
-$connect = mysqli_connect( "localhost", "root", "","transporter");
-
-$sql=" update login  set   status='".$up."' where  Username = '".$_GET["d"]."'   " ;
-
-
-
-
-
-
-$result = mysqli_query($connect,$sql) or die  ( mysqli_error($connect)  );
+	<tr><img src="route.jpg"></tr>
+	
+	</table>
+	</center>
 
 
 
-
-
-
-echo "<script>alert('Account Confirmation Successful ');</script>";
-
-header("location:seerequest.php");
-?>
+</body>
+</html>>
 
 
 <?php

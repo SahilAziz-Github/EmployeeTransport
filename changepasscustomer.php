@@ -1,3 +1,4 @@
+
 <?php
 
 
@@ -6,6 +7,7 @@ if(isset($_COOKIE["valid"]) && $_COOKIE["valid"]=="yes")
 
 
 ?>
+
 
 
 <!DOCTYPE html>
@@ -231,7 +233,7 @@ return flag;
 <h3  style="text-shadow: 1px 1px blue">Change Password:</h3>
 
 <div style="border-radius: 5px; background-color: #f2f2f2; padding: 20px;">
-  <form action="changepassadmin.php" name= "fm"  method="post">
+  <form action="changepasscustomer.php" name= "fm"  method="post">
 
     <label for="pass"><b>Current Password:</b></label>
    <input style="width: 100%;padding: 12px 20px;margin: 8px 0;display: inline-block;border: 1px solid #ccc;border-radius: 4px;
@@ -291,6 +293,7 @@ foreach ($temp as $k => $v) {
 
     $result = mysqli_query($connect,$sql) or die  ( mysqli_error($connect)  );
 
+     
 
 
 
@@ -340,13 +343,14 @@ foreach ($temp as $k => $v) {
 
   </form>
 
-  <a href="adminhome.php" title=""  style="width: 97%;background-color: #4CAF50;color: white;padding: 14px 20px;margin: 8px 0;border: none;
-   border-radius: 4px; cursor: pointer;text-align:center;text-decoration: none;float: left;">Back</a><br><br><br>
+  <a href="customerhome.php" title=""  style="width: 97%;background-color: #4CAF50;color: white;padding: 14px 20px;margin: 8px 0;border: none;
+   border-radius: 4px; cursor: pointer;text-align:center;text-decoration: none;float: left;">Go Back</a><br><br><br>
 
 </div>
 
 </body>
 </html>
+
 
 
 <?php
