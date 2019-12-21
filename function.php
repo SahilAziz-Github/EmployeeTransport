@@ -7,6 +7,7 @@ function logindataRead()
 
 global $temp;
 global $cred;
+global $stat;
 
 
 
@@ -22,10 +23,14 @@ while ($row = mysqli_fetch_assoc($result)  )
 $uname = trim($row["userName"] );
 $pass = trim( $row["password"]) ;
 $utype	=  trim($row["uType"] );
+$status	=  trim($row["status"] );
 
 $temp [ $uname ] = $pass ;
 
 $cred [ $uname ] = $utype ;
+
+$stat [ $uname ] = $status ;
+
 
 }
 

@@ -174,6 +174,7 @@ if (isset($_POST["submit"]))
 
 $temp=array();
 $cred=array();
+$stat=array();
 
 
 include("function.php");
@@ -190,80 +191,87 @@ foreach ($temp as $k => $v) {
   {
 
 
-
-
-
-     if ($cred[$k]=="customer") 
+    if ($stat[$k] == "valid")
      {
-      global $flag;
-      global $k;
-
-     setcookie("valid","yes",time()+5000);
-     setcookie("uname",$k,time()+5000);
-
-     $flag=1;
-
-      $connect = mysqli_connect( "localhost", "root", "","transporter");
-
-      $sql=" select * from customerinfo where UserName = '".$_POST['usernamr']."' ";
-
-      $result = mysqli_query($connect,$sql) or die  ( mysqli_error($connect)  );
-
-      while ($row = mysqli_fetch_assoc($result)  ) 
-      {
-
-      
-      $temp["subscription"] = $row["subscription"]; 
-
-     
-      }
-
-      if ($temp["subscription"] =="yes")
-      {
-      header("Location:customerhome.php");
-      }
-      else
-      {
-        header("Location:subscription.php");
-      }
-     }
-
-
-
-      if ($cred[$k]=="service") 
-     {
-
-      global $flag;
-      global $k;
-
-      
-     setcookie("valid","yes",time()+5000);
-     setcookie("uname",$k,time()+5000);
-      
-      $flag=1;
-      
-      header("Location:serviceprohome.php");
-      
-     }
+      # code...
     
-     if ($cred[$k]=="admin") 
-     {
 
-      global $flag;
-      global $k;
 
-     
-     setcookie("valid","yes",time()+5000);
-     setcookie("uname",$k,time()+5000);
-     
-      $flag=1;
-     
-      header("Location:adminhome.php");
-    
+       if ($cred[$k]=="customer") 
+       {
+        global $flag;
+        global $k;
+
+       setcookie("valid","yes",time()+5000);
+       setcookie("uname",$k,time()+5000);
+
+       $flag=1;
+
+        $connect = mysqli_connect( "localhost", "root", "","transporter");
+
+        $sql=" select * from customerinfo where UserName = '".$_POST['usernamr']."' ";
+
+        $result = mysqli_query($connect,$sql) or die  ( mysqli_error($connect)  );
+
+        while ($row = mysqli_fetch_assoc($result)  ) 
+        {
+
+        
+        $temp["subscription"] = $row["subscription"]; 
+
+       
+        }
+
+        if ($temp["subscription"] =="yes")
+        {
+        header("Location:customerhome.php");
+        }
+        else
+        {
+          header("Location:subscription.php");
+        }
+       }
+
+
+
+        if ($cred[$k]=="service") 
+       {
+
+        global $flag;
+        global $k;
+
+        
+       setcookie("valid","yes",time()+5000);
+       setcookie("uname",$k,time()+5000);
+        
+        $flag=1;
+        
+        header("Location:serviceprohome.php");
+        
+       }
+      
+       if ($cred[$k]=="admin") 
+       {
+
+        global $flag;
+        global $k;
+
+       
+       setcookie("valid","yes",time()+5000);
+       setcookie("uname",$k,time()+5000);
+       
+        $flag=1;
+       
+        header("Location:adminhome.php");
+      
+       }
+
      }
 
+     echo "<script>alert('Your Account Confirmation is Pending ');</script>";
+     echo "<script>alert('Please Wait');</script>";
+     
   }
-
   
 }
 
