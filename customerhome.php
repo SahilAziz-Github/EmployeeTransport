@@ -7,15 +7,19 @@ if(isset($_COOKIE["valid"]) && $_COOKIE["valid"]=="yes")
 
 ?>
 
+
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
 
 </head>
 <body>
-<form method="POST" action="customerhome.php" name= "customerhome" style="width:500px; height:500px; display:inline-block;">
+<form method="POST" action="customerhome.php" name= "customerhome" style="width:800px; height:500px; display:inline-block;">
 <fieldset>
-<table border="0" width=100%>
+<table border="0" height=100% width=100%>
 <tr>
 
 <td ><a href="route.php"> Route </a></td>
@@ -23,6 +27,7 @@ if(isset($_COOKIE["valid"]) && $_COOKIE["valid"]=="yes")
 <td > <a href="subscription.php"> Subscribe! </a></td>
 <td> <a href="changepasscustomer.php"> Change Password </a></td>
 <td> <a href="comment.php"> comment </a></td>
+<td><a href="viewbooking.php"> See Booking </a></td>
 <td><a href="logout.php"> Log Out </a></td>
 
 </tr>
@@ -45,6 +50,8 @@ if(isset($_COOKIE["valid"]) && $_COOKIE["valid"]=="yes")
 			<option value = "gulshan"> Gulshan </option>
 			<option value = "baridhara"> Baridhara </option>			
 			<option value = "bashundhara"> Basundhara </option>
+			<option value = "shantinagar"> Shantinagar </option>
+			<option value = "rampura"> Rampura </option>
 			</select><span id="pl"></span><br>
 
 <div>Drop off Location: </div>
@@ -56,6 +63,8 @@ if(isset($_COOKIE["valid"]) && $_COOKIE["valid"]=="yes")
 			<option value = "gulshan"> Gulshan </option>
 			<option value = "baridhara"> Baridhara </option>
 			<option value = "basundhara"> Basundhara </option>
+			<option value = "shantinagar"> Shantinagar </option>
+			<option value = "rampura"> Rampura </option>
 			</select><span id="dl"></span><br>
 
 <div><input type="submit" name="search" value="Search"/>  </div>
@@ -167,6 +176,7 @@ while ($row = mysqli_fetch_assoc($result)  )
 </script>
 </body>
 </html>
+
 
 
 <?php

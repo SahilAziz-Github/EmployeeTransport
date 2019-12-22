@@ -13,8 +13,12 @@
   <li style="float: left;"><a  style="display: block;color: white;text-align: center;padding: 14px 16px;text-decoration: none ; background-color: #4CAF50;"  href="#home">Home</a></li>
 
   <li style="float: left;"><a style="display: block;color: white;text-align: center;padding: 14px 16px;text-decoration: none;"  href="login.php">Login</a></li>
-
+ 
   <li style="float: left;"><a style="display: block;color: white;text-align: center;padding: 14px 16px;text-decoration: none;"  href="Reg.php">Registration</a></li>
+  
+  <li style="float: left;"><a style="display: block;color: white;text-align: center;padding: 14px 16px;text-decoration: none;"  href="contact.html">Contact us</a></li>
+
+  <li style="float: left;"><a style="display: block;color: white;text-align: center;padding: 14px 16px;text-decoration: none;"  href="vision.html">Our Vision</a></li>
 </ul>
    
 <div >
@@ -25,22 +29,19 @@
    
   
 
-<img style="float:right;" src="Fotolia_30691356_Subscription_XL.jpg" alt="">
+<img style="float:right;" src="c1.jpg" height="500px" width="700px" alt="">
 
-<h3 >Why should we use this sites?</h3>
+<h3 >Why should we use this website?</h3>
 <ul>
-  <li>This is the best site to rent house in dhaka.</li>
-  <li>We ensure youe security even after you rent the house.</li>
-  <li>The rent giver can not move you from house with out any valid reason.</li>
-    <li>The rent can not be increased before six month. </li>
-    <li>The rent taker and rent giver will both have an aggriment. </li>
+  <li>This is the best transportation in dhaka.</li>
+  <li>We ensure your travel security as top priority.</li>
+  <li>No trips are cancelled without any valid reason.</li>
+  <li>User data is safely stored inside our secure servers.</li>
+  <li>No fake accounts since all types of user accounts are verified first.</li>
 </ul>
    
 <br/>
 
-
-
-<h4 style="color: black ;">   Contact Us : 01303070781,01303064685  </h4><br/>
 
 
 
@@ -62,7 +63,7 @@ foreach ($data as $v)
 
     ?>
 
-<b><u><span style="font-size:30px;color:green "> FOUNDER:</span></u></b><br>
+<b><u><span style="font-size:30px;color:green "> Founder:</span></u></b><br>
 
 
 
@@ -83,7 +84,7 @@ foreach ($data as $v)
 
 
 
-<b><u><span style="font-size:30px;color:green  "> Cofounder:</span></u></b><br>
+<b><u><span style="font-size:30px;color:green  "> Co-founder:</span></u></b><br>
 
 
 

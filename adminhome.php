@@ -534,6 +534,15 @@ foreach ($data as  $v)
 <a href="subscriptionrequest.php"  style="width: 97%;background-color: #4CAF50;color: white;padding: 14px 20px;margin: 8px 0;border: none;
    border-radius: 4px; cursor: pointer;text-align:center;text-decoration: none;float: left;">Pending Subscription Requests</a><br><br><br>
 
+<a href="seedriverrequest.php"  style="width: 97%;background-color: #4CAF50;color: white;padding: 14px 20px;margin: 8px 0;border: none;
+  border-radius: 4px; cursor: pointer;text-align:center;text-decoration: none;float: left;">Pending Driver Account Requests</a><br><br><br>
+
+<a href="livesearch.php"  style="width: 97%;background-color: #4CAF50;color: white;padding: 14px 20px;margin: 8px 0;border: none;
+   border-radius: 4px; cursor: pointer;text-align:center;text-decoration: none;float: left;">Customer Live Search</a><br><br><br>
+
+<a href="livesearchdriver.php"  style="width: 97%;background-color: #4CAF50;color: white;padding: 14px 20px;margin: 8px 0;border: none;
+   border-radius: 4px; cursor: pointer;text-align:center;text-decoration: none;float: left;">Driver Live Search</a><br><br><br>
+
 
 
 

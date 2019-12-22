@@ -1,5 +1,5 @@
-<?php
 
+<?php
 
 if(isset($_COOKIE["valid"]) && $_COOKIE["valid"]=="yes")
 {
@@ -21,21 +21,28 @@ if(isset($_COOKIE["valid"]) && $_COOKIE["valid"]=="yes")
 
     <th style="border: 1px solid #ddd; padding: 8px;padding-top: 12px;padding-bottom: 12px;text-align: left;
   background-color: #4CAF50;
-  color: white;">User Name: </th>
+  color: white;">Driver Name: </th>
     <th style="border: 1px solid #ddd; padding: 8px;padding-top: 12px;padding-bottom: 12px;text-align: left;
   background-color: #4CAF50;
-  color: white;">Password : </th>
+  color: white;">Age : </th>
     <th style="border: 1px solid #ddd; padding: 8px;padding-top: 12px;padding-bottom: 12px;text-align: left;
   background-color: #4CAF50;
-  color: white;">User Type:</th>
+  color: white;">Driving Experience:</th>
   <th style="border: 1px solid #ddd; padding: 8px;padding-top: 12px;padding-bottom: 12px;text-align: left;
   background-color: #4CAF50;
-  color: white;">Accept</th>
+  color: white;">Phone:</th>
 
-<th style="border: 1px solid #ddd; padding: 8px;padding-top: 12px;padding-bottom: 12px;text-align: left;
+  <th style="border: 1px solid #ddd; padding: 8px;padding-top: 12px;padding-bottom: 12px;text-align: left;
   background-color: #4CAF50;
-  color: white;">Reject</th>
+  color: white;">Address:</th>
 
+  <th style="border: 1px solid #ddd; padding: 8px;padding-top: 12px;padding-bottom: 12px;text-align: left;
+  background-color: #4CAF50;
+  color: white;">Accept:</th>
+
+  <th style="border: 1px solid #ddd; padding: 8px;padding-top: 12px;padding-bottom: 12px;text-align: left;
+  background-color: #4CAF50;
+  color: white;">Reject:</th>
 
   
 
@@ -55,7 +62,7 @@ if(isset($_COOKIE["valid"]) && $_COOKIE["valid"]=="yes")
 //$cd=array();
 include("lib.php");
 
-$jsonDATA = getJSONFromDB(" select * from login ");
+$jsonDATA = getJSONFromDB(" select * from driver ");
 
 $jsn=json_decode($jsonDATA);
 //include("function.php");
@@ -77,16 +84,18 @@ foreach ($jsn as  $v)
 
 
 <tr >
-    <td style="border: 1px solid #ddd; padding: 8px;"><?php  echo $v->userName;   ?></td>
-    <td style="border: 1px solid #ddd; padding: 8px;"><?php  echo $v->password;   ?></td>
-    <td style="border: 1px solid #ddd; padding: 8px;"><?php  echo $v->uType;   ?></td>
-    <td style="border: 1px solid #ddd; padding: 8px;"><a style='text-decoration:none;color:green;' href='accept.php?d=<?php echo $v->userName ; ?> ' >
+    <td style="border: 1px solid #ddd; padding: 8px;"><?php  echo $v->driverName;   ?></td>
+    <td style="border: 1px solid #ddd; padding: 8px;"><?php  echo $v->age;   ?></td>
+    <td style="border: 1px solid #ddd; padding: 8px;"><?php  echo $v->experience;   ?></td>
+    <td style="border: 1px solid #ddd; padding: 8px;"><?php  echo $v->phone;   ?></td>
+    <td style="border: 1px solid #ddd; padding: 8px;"><?php  echo $v->address;   ?></td>
+    <td style="border: 1px solid #ddd; padding: 8px;"><a style='text-decoration:none;color:green;' href='acceptd.php?d=<?php echo $v->driverName ; ?> ' >
 
     
 
      Accept</a></td>
 
-	<td style="border: 1px solid #ddd; padding: 8px;"><a style='text-decoration:none;color:red;' href='reject.php?d=<?php echo $v->userName ; ?> ' >
+	<td style="border: 1px solid #ddd; padding: 8px;"><a style='text-decoration:none;color:red;' href='rejectd.php?d=<?php echo $v->driverName ; ?> ' >
 
     
 

@@ -25,10 +25,10 @@ while ($row = mysqli_fetch_assoc($result)  )
 		$temp["departureLocation"] = $row["departureLocation"];
 
 	}
-	$sql1="insert into booking (userName,carName,driverName,departureTime,route) values (	'".$_COOKIE["uname"]."'	,'".$temp["carName"]."' , '".$temp["driverName"]."'	, '".$temp["departureTime"]."'	, '".$temp["departureLocation"]."') ";
+	$sql1="insert into booking (userName,carName,driverName,departureTime,departureLocation) values (	'".$_COOKIE["uname"]."'	,'".$temp["carName"]."' , '".$temp["driverName"]."'	, '".$temp["departureTime"]."'	, '".$temp["departureLocation"]."') ";
 	$result1 = mysqli_query($connect,$sql1) or die  ( mysqli_error($connect)  );
-
-header("Location:fake.php");
+echo "<script>alert('Your Booking is Successful ');</script>";
+header("Location:customerhome.php");
 
 
 	
