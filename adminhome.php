@@ -1,6 +1,3 @@
-
-
-
 <?php
 
 
@@ -181,7 +178,7 @@ if ($_POST["uname"] == $v["UserName"]  )
      <td style="border: 1px solid #ddd; padding: 8px;"><?php  echo $v["Gender"];   ?></td>
   <!--   <td style="border: 1px solid #ddd; padding: 8px;"><?php  //echo $v["Occupation"];   ?></td> -->
      <td style="border: 1px solid #ddd; padding: 8px;"><?php  echo $v["UserType"];   ?></td>
-     <td style="border: 1px solid #ddd; padding: 8px;"><a style='text-decoration:none;color:green;' href='delete.php?d=<?php echo $v["UserName"] ; ?> ' >
+     <td style="border: 1px solid #ddd; padding: 8px;"><a style='text-decoration:none;color:green;' href='deleteprovider.php?d=<?php echo $v["UserName"] ; ?> ' >
 
     
 
@@ -265,7 +262,7 @@ if ($_POST["uname"] == $v["UserName"]  )
      <td style="border: 1px solid #ddd; padding: 8px;"><?php  echo $v["Gender"];   ?></td>
    <!--  <td style="border: 1px solid #ddd; padding: 8px;"><?php // echo $v["Occupation"];   ?></td> -->
      <td style="border: 1px solid #ddd; padding: 8px;"><?php  echo $v["UserType"];   ?></td>
-    <td style="border: 1px solid #ddd; padding: 8px;"><a style='text-decoration:none;color:green;' href='delete.php?d=<?php echo $v["UserName"] ; ?> ' >
+    <td style="border: 1px solid #ddd; padding: 8px;"><a style='text-decoration:none;color:green;' href='deletecustomer.php?d=<?php echo $v["UserName"] ; ?> ' >
 
     
 
@@ -343,7 +340,7 @@ foreach ($data as  $v)
     <td style="border: 1px solid #ddd; padding: 8px;"><?php  echo $v["Email"];   ?></td>
      <td style="border: 1px solid #ddd; padding: 8px;"><?php  echo $v["Gender"];   ?></td>
      <td style="border: 1px solid #ddd; padding: 8px;"><?php  echo $v["UserType"];   ?></td>
-     <td style="border: 1px solid #ddd; padding: 8px;"><a style='text-decoration:none;color:green;' href='delete.php?d=<?php echo $v["UserName"] ; ?> ' >
+     <td style="border: 1px solid #ddd; padding: 8px;"><a style='text-decoration:none;color:green;' href='deletecustomer.php?d=<?php echo $v["UserName"] ; ?> ' >
 
     
 
@@ -414,7 +411,7 @@ foreach ($data as  $v)
     <td style="border: 1px solid #ddd; padding: 8px;"><?php  echo $v["Email"];   ?></td>
      <td style="border: 1px solid #ddd; padding: 8px;"><?php  echo $v["Gender"];   ?></td>
      <td style="border: 1px solid #ddd; padding: 8px;"><?php  echo $v["UserType"];   ?></td>
-     <td style="border: 1px solid #ddd; padding: 8px;"><a style='text-decoration:none;color:green;' href='delete.php?d=<?php echo $v["UserName"] ; ?> ' >
+     <td style="border: 1px solid #ddd; padding: 8px;"><a style='text-decoration:none;color:green;' href='deleteprovider.php?d=<?php echo $v["UserName"] ; ?> ' >
 
     
 
@@ -486,7 +483,7 @@ foreach ($data as  $v)
     <td style="border: 1px solid #ddd; padding: 8px;"><?php  echo $v["Email"];   ?></td>
      <td style="border: 1px solid #ddd; padding: 8px;"><?php  echo $v["Gender"];   ?></td>
      <td style="border: 1px solid #ddd; padding: 8px;"><?php  echo $v["UserType"];   ?></td>
-     <td style="border: 1px solid #ddd; padding: 8px;"><a style='text-decoration:none;color:green;' href='delete.php?d=<?php echo $v["UserName"] ; ?> ' >
+     <td style="border: 1px solid #ddd; padding: 8px;"><a style='text-decoration:none;color:green;' href='deletecustomer.php?d=<?php echo $v["UserName"] ; ?> ' >
 
     
 
@@ -545,6 +542,10 @@ foreach ($data as  $v)
 
 <a href="livesearchdriver.php"  style="width: 97%;background-color: #4CAF50;color: white;padding: 14px 20px;margin: 8px 0;border: none;
    border-radius: 4px; cursor: pointer;text-align:center;text-decoration: none;float: left;">Driver Live Search</a><br><br><br>
+
+<a href="deletedriveraccount.php"  style="width: 97%;background-color: #4CAF50;color: white;padding: 14px 20px;margin: 8px 0;border: none;
+   border-radius: 4px; cursor: pointer;text-align:center;text-decoration: none;float: left;">Delete Driver Account</a><br><br><br>
+
 
 
 

@@ -33,6 +33,9 @@ if(isset($_COOKIE["valid"]) && $_COOKIE["valid"]=="yes")
   <th style="border: 1px solid #ddd; padding: 8px;padding-top: 12px;padding-bottom: 12px;text-align: left;
   background-color: #4CAF50;
   color: white;">Accept</th>
+  <th style="border: 1px solid #ddd; padding: 8px;padding-top: 12px;padding-bottom: 12px;text-align: left;
+  background-color: #4CAF50;
+  color: white;">Reject</th>
 
 
   
@@ -79,6 +82,11 @@ foreach ($data as  $v)
     
 
      Accept</a></td>
+    <td style="border: 1px solid #ddd; padding: 8px;"><a style='text-decoration:none;color:green;' href='deletesub.php?d=<?php echo $v["userName"] ; ?> ' >
+
+    
+
+     Delete</a></td>
      
 
 </tr>
