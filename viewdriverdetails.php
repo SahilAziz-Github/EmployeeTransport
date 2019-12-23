@@ -95,13 +95,10 @@ foreach ($jsn as  $v)
 
 
 
-<?php 
 
 
-
-
-
-
+<?php  
+$_SESSION["img"]= $v->carImage;
 
 
  }
@@ -116,7 +113,9 @@ foreach ($jsn as  $v)
 
 </table>
 
-<img src="">
+
+ <img  style="float: right;"   src='<?php echo $_SESSION["img"]; ?>' height='400px' width='600px'>
+ <h3 style="float: right;">Car Picture:</h3>
 
 
 
