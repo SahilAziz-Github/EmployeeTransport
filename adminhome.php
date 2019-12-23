@@ -44,10 +44,62 @@ function valid()
 
  </script>
 
+<style>
+body {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 15%;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+   
+}
+
+li a.active {
+  background-color: #4CAF50;
+  color: white;
+
+}
+
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+</style>
+
 
 
 </head>
 <body>
+
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="history.php">History</a></li>
+  <li><a href="seerequest.php">Account Request</a></li>
+  <li><a href="subscriptionrequest.php">Subscription Request</a></li>
+  <li><a href="seedriverrequest.php">Driver Request</a></li>
+  <li><a href="seebookingrequest.php">Booking Request</a></li>
+  <li><a href="livesearch.php">Customer Search</a></li>
+  <li><a href="livesearchdriver.php">Driver Search</a></li>
+  <li><a href="deletedriveraccount.php">Remove Driver</a></li>
+  
+</ul>
+
+
+<div style="margin-left:15%;padding:1px 16px;height:1000px;">
 <p><h2>Admin Page:</h2></p>
 
 <p>
@@ -519,32 +571,9 @@ foreach ($data as  $v)
 </table>
 </p>
 
-<a href="history.php"  style="width: 97%;background-color: #4CAF50;color: white;padding: 14px 20px;margin: 8px 0;border: none;
-   border-radius: 4px; cursor: pointer;text-align:center;text-decoration: none;float: left;">Check History</a><br><br><br>
-
-<a href="seerequest.php"  style="width: 97%;background-color: #4CAF50;color: white;padding: 14px 20px;margin: 8px 0;border: none;
-   border-radius: 4px; cursor: pointer;text-align:center;text-decoration: none;float: left;">Pending Account Requests</a><br><br><br>
-
 <a href="changepassadmin.php"  style="width: 97%;background-color: #4CAF50;color: white;padding: 14px 20px;margin: 8px 0;border: none;
    border-radius: 4px; cursor: pointer;text-align:center;text-decoration: none;float: left;">Change Password</a><br><br><br>
 
-<a href="subscriptionrequest.php"  style="width: 97%;background-color: #4CAF50;color: white;padding: 14px 20px;margin: 8px 0;border: none;
-   border-radius: 4px; cursor: pointer;text-align:center;text-decoration: none;float: left;">Pending Subscription Requests</a><br><br><br>
-
-<a href="seedriverrequest.php"  style="width: 97%;background-color: #4CAF50;color: white;padding: 14px 20px;margin: 8px 0;border: none;
-  border-radius: 4px; cursor: pointer;text-align:center;text-decoration: none;float: left;">Pending Driver Account Requests</a><br><br><br>
-
-<a href="seebookingrequest.php"  style="width: 97%;background-color: #4CAF50;color: white;padding: 14px 20px;margin: 8px 0;border: none;
-  border-radius: 4px; cursor: pointer;text-align:center;text-decoration: none;float: left;">Pending Booking Requests</a><br><br><br>
-
-<a href="livesearch.php"  style="width: 97%;background-color: #4CAF50;color: white;padding: 14px 20px;margin: 8px 0;border: none;
-   border-radius: 4px; cursor: pointer;text-align:center;text-decoration: none;float: left;">Customer Live Search</a><br><br><br>
-
-<a href="livesearchdriver.php"  style="width: 97%;background-color: #4CAF50;color: white;padding: 14px 20px;margin: 8px 0;border: none;
-   border-radius: 4px; cursor: pointer;text-align:center;text-decoration: none;float: left;">Driver Live Search</a><br><br><br>
-
-<a href="deletedriveraccount.php"  style="width: 97%;background-color: #4CAF50;color: white;padding: 14px 20px;margin: 8px 0;border: none;
-   border-radius: 4px; cursor: pointer;text-align:center;text-decoration: none;float: left;">Delete Driver Account</a><br><br><br>
 
 
 
@@ -555,7 +584,7 @@ foreach ($data as  $v)
 
 
 
-
+</div>
 </body>
 </html>
 
