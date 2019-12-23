@@ -68,15 +68,6 @@ $sql=" insert into customerinfo values ('".$_POST["fname"]."','".$_POST["lname"]
 $result = mysqli_query($connect,$sql) or die  ( mysqli_error($connect)  );
 
 
-
-
-
-
-
-
-
-
-
 }
 
 

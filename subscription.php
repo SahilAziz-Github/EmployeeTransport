@@ -1,7 +1,27 @@
+<?php
+session_start();
+?>
+
 
 
 <html>
 <head>
+
+
+<script type="text/javascript">
+	
+
+
+
+
+</script>>
+
+
+
+
+
+
+
 	<style type="text/css">
 		
 		h1 {
@@ -40,14 +60,10 @@ input[type=submit]:hover {
 <head>
 	<body>
 		<div>
-		<form>
+		<form method="POST" action="subscription.php">
 			
 				<h1><b><u> Subscribe </u></b></h1>
-				
-				<h3> Username:</h3>
-				<input type="text" name="uname">
-				<h3> Email:</h3>
-				<input type="text" name="email">
+				<h3>Welcome <?php echo $_COOKIE['uname'] ;?></h3>	
 				<h3> Month:</h3>
 				 <select id="month" name="month">
       <option value="january">january</option>
@@ -63,14 +79,41 @@ input[type=submit]:hover {
       <option value="november">november</option>
       <option value="december">december</option>
     </select>
-    <h3> Payment: </h3>
-    <input type="radio" name="payment" value="bkash"> Bkash
+    <h3> Air Condition: </h3>
+    <input type="radio" name="ac" value="ac" checked> Ac
+    <input type="radio" name="ac" value="nonac"> Non-Ac 
+	<h3> Payment: </h3>
+    <input type="radio" name="payment" value="bkash" checked> Bkash
     <input type="radio" name="payment" value="card"> Card <br>
-				<input type="submit" name="submit" value="submit">
+	
+
+	 <b id="fill"></b>
+    <br> 
+  
+
+
+	<input type="submit" name="submit" value="submit">
 
 			
-		</form>
+	</form>
 	</div>
 	</body>
 </html>
 
+<?php
+	if(isset($_POST['submit']))
+	{
+
+	$s="";
+	$connect = mysqli_connect( "localhost", "root", "","transporter");
+
+	$sql=" insert into subscription values ('".$_COOKIE["uname"]."','".$_POST["month"]."','".$_POST["ac"]."','".$_POST["payment"]."') ";
+
+	$result = mysqli_query($connect,$sql) or die  ( mysqli_error($connect)  );
+
+
+	echo "Subscription Request PLaced Successfully";
+	}
+
+
+?>
