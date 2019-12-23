@@ -55,15 +55,11 @@ if($_POST["utype"]=="customer")
 
 {
 
-$subscription = "no";
 
 $connect = mysqli_connect( "localhost", "root", "","transporter");
 
-$sql=" insert into customerinfo values ('".$_POST["fname"]."','".$_POST["lname"]."','".$_POST["uname"]."','".$_POST["phon"]."',
-
-'".$_POST["email"]."','".md5($_POST["pass"])."','".$_POST["group1"]."','".$_POST["utype"]."' ,'".$subscription."'
-
-) ";
+$sql=" insert into customerinfo values ('".$_POST["fname"]."','".$_POST["lname"]."','".$_POST["uname"]."','".$_POST["phon"]."','".$_POST["email"]."','".$_POST["group1"]."','".$_POST["utype"]."' ,
+  'Not_Requested','Not_Requested','Not_Requested','Not_Requested')";
 
 $result = mysqli_query($connect,$sql) or die  ( mysqli_error($connect)  );
 

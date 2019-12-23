@@ -478,7 +478,7 @@ return flag ;
 
 <body>
 
-<h2 style="text-shadow: 1px 1px blue"> <U style="color: blue;">Regeistration Please</U></h3>
+<h2 style="text-shadow: 1px 1px blue"> <U style="color: blue;">Registration Form</U></h3>
 
 <div style="border-radius: 5px; background-color: #f2f2f2; padding: 20px;">
 

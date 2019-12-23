@@ -25,7 +25,13 @@ if(isset($_COOKIE["valid"]) && $_COOKIE["valid"]=="yes")
 
     <th style="border: 1px solid #ddd; padding: 8px;padding-top: 12px;padding-bottom: 12px;text-align: left;
   background-color: #4CAF50;
-  color: white;">User Type:</th>
+  color: white;">Month:</th>
+  <th style="border: 1px solid #ddd; padding: 8px;padding-top: 12px;padding-bottom: 12px;text-align: left;
+  background-color: #4CAF50;
+  color: white;">Air Condition:</th>
+  <th style="border: 1px solid #ddd; padding: 8px;padding-top: 12px;padding-bottom: 12px;text-align: left;
+  background-color: #4CAF50;
+  color: white;">Payment:</th>
   <th style="border: 1px solid #ddd; padding: 8px;padding-top: 12px;padding-bottom: 12px;text-align: left;
   background-color: #4CAF50;
   color: white;">Subscription:</th>
@@ -64,9 +70,7 @@ $i=0;
 
 foreach ($data as  $v) 
 { 
-  if($v["subscription"] == "no")
-  {
-
+ 
 
 
 
@@ -75,18 +79,21 @@ foreach ($data as  $v)
 
 <tr >
     <td style="border: 1px solid #ddd; padding: 8px;"><?php  echo $v["userName"];   ?></td>
-    <td style="border: 1px solid #ddd; padding: 8px;"><?php  echo $v["uType"];   ?></td>
+    <td style="border: 1px solid #ddd; padding: 8px;"><?php  echo $v["month"];   ?></td>
+    <td style="border: 1px solid #ddd; padding: 8px;"><?php  echo $v["air"];   ?></td>
+    <td style="border: 1px solid #ddd; padding: 8px;"><?php  echo $v["payment"];   ?></td>
     <td style="border: 1px solid #ddd; padding: 8px;"><?php  echo $v["subscription"];   ?></td>
+    
     <td style="border: 1px solid #ddd; padding: 8px;"><a style='text-decoration:none;color:green;' href='acceptsub.php?d=<?php echo $v["userName"] ; ?> ' >
 
     
 
      Accept</a></td>
-    <td style="border: 1px solid #ddd; padding: 8px;"><a style='text-decoration:none;color:green;' href='deletesub.php?d=<?php echo $v["userName"] ; ?> ' >
+    <td style="border: 1px solid #ddd; padding: 8px;"><a style='text-decoration:none;color:green;' href='rejectsub.php?d=<?php echo $v["userName"] ; ?> ' >
 
     
 
-     Delete</a></td>
+     Reject</a></td>
      
 
 </tr>
@@ -103,7 +110,7 @@ foreach ($data as  $v)
 
 
 
- }
+ 
 
        
 

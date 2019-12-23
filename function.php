@@ -181,7 +181,7 @@ $cd["Phone"]=$row["phone"];
 
 $cd["Email"]=$row["email"];
 
-$cd["Password"]=$row["password"];
+
 
 $cd["Gender"]=$row["gender"];
 
@@ -257,7 +257,7 @@ global $data;
 
 $connect = mysqli_connect( "localhost", "root", "","transporter");
 
-$sql=" select * from customerinfo ";
+$sql=" select * from customerinfo where subscription='pending' ";
 
 $result = mysqli_query($connect,$sql) or die  ( mysqli_error($connect)  );
 
@@ -266,7 +266,9 @@ while ($row = mysqli_fetch_assoc($result)  )
 
 $cd["userName"]=$row["userName"];
 
-$cd["uType"]=$row["userType"];
+$cd["month"]=$row["month"];
+$cd["air"]=$row["air"];
+$cd["payment"]=$row["payment"];
 
 $cd["subscription"]=$row["subscription"];
 

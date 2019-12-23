@@ -7,21 +7,6 @@ session_start();
 <html>
 <head>
 
-
-<script type="text/javascript">
-	
-
-
-
-
-</script>>
-
-
-
-
-
-
-
 	<style type="text/css">
 		
 		h1 {
@@ -92,28 +77,36 @@ input[type=submit]:hover {
   
 
 
-	<input type="submit" name="submit" value="submit">
+	<input type="submit" name="submit" value="Submit">
+	<a href="logout.php"  style="width: 97%;background-color: MidnightBlue;color: white;padding: 14px 20px;margin: 8px 0;border: none;
+   border-radius: 4px; cursor: pointer;text-align:center;text-decoration: none;float: left;">Log Out </a><br><br><br>
+
 
 			
 	</form>
-	</div>
-	</body>
-</html>
+	
 
 <?php
 	if(isset($_POST['submit']))
 	{
 
-	$s="";
+	
 	$connect = mysqli_connect( "localhost", "root", "","transporter");
 
-	$sql=" insert into subscription values ('".$_COOKIE["uname"]."','".$_POST["month"]."','".$_POST["ac"]."','".$_POST["payment"]."') ";
+	
+	$sql=" update customerinfo  set   subscription ='pending',month='".$_POST['month']."',
+	air='".$_POST['ac']."',payment='".$_POST['payment']."'   
+	where  userName = '".$_COOKIE['uname']."'   " ;
 
 	$result = mysqli_query($connect,$sql) or die  ( mysqli_error($connect)  );
 
 
-	echo "Subscription Request PLaced Successfully";
+	echo "Subscription Request Placed Successfully";
 	}
 
 
 ?>
+
+</div>
+	</body>
+</html>
