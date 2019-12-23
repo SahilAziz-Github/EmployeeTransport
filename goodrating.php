@@ -7,20 +7,31 @@ if(isset($_COOKIE["valid"]) && $_COOKIE["valid"]=="yes")
 
 ?>
 
+
+
 <?php
 
+$rate= "Good";
 
 $connect = mysqli_connect( "localhost", "root", "","transporter");
 
-$sql=" delete from login where  Username = '".$_GET["d"]."'   " ;
+$sql=" update driver  set   rating='".$rate."' where  driverName = '".$_GET["d"]."'   " ;
+
+
+
+
+
 
 $result = mysqli_query($connect,$sql) or die  ( mysqli_error($connect)  );
 
-echo "<script>alert('Account Deletion Successful ');</script>";
 
-header("location:adminhome.php");
+
+
+
+
+
+header("location:viewbooking.php");
 ?>
-
 
 
 <?php

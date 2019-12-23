@@ -12,7 +12,7 @@ if(isset($_COOKIE["valid"]) && $_COOKIE["valid"]=="yes")
 <?php
 	//$temp=array();
 	$connect = mysqli_connect( "localhost", "root", "","transporter");
-
+	$status = "0";
 	$sql = "SELECT * from carinfo where carName = '".$_GET["d"]."' ";
 //$sql=" select * from carinfo";
 $result = mysqli_query($connect,$sql) or die  ( mysqli_error($connect)  );
@@ -25,7 +25,7 @@ while ($row = mysqli_fetch_assoc($result)  )
 		$temp["departureLocation"] = $row["departureLocation"];
 
 	}
-	$sql1="insert into booking (userName,carName,driverName,departureTime,departureLocation) values (	'".$_COOKIE["uname"]."'	,'".$temp["carName"]."' , '".$temp["driverName"]."'	, '".$temp["departureTime"]."'	, '".$temp["departureLocation"]."') ";
+	$sql1="insert into booking (userName,carName,driverName,departureTime,departureLocation,status) values (	'".$_COOKIE["uname"]."'	,'".$temp["carName"]."' , '".$temp["driverName"]."'	, '".$temp["departureTime"]."'	, '".$temp["departureLocation"]."','".$status."') ";
 	$result1 = mysqli_query($connect,$sql1) or die  ( mysqli_error($connect)  );
 echo "<script>alert('Your Booking is Successful ');</script>";
 header("Location:customerhome.php");

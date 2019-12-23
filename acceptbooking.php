@@ -7,20 +7,32 @@ if(isset($_COOKIE["valid"]) && $_COOKIE["valid"]=="yes")
 
 ?>
 
+
+
 <?php
 
+$up= "valid";
 
 $connect = mysqli_connect( "localhost", "root", "","transporter");
 
-$sql=" delete from login where  Username = '".$_GET["d"]."'   " ;
+$sql=" update booking  set   status='".$up."' where  Username = '".$_GET["d"]."'   " ;
+
+
+
+
+
 
 $result = mysqli_query($connect,$sql) or die  ( mysqli_error($connect)  );
 
-echo "<script>alert('Account Deletion Successful ');</script>";
 
-header("location:adminhome.php");
+
+
+
+
+echo "<script>alert('Account Confirmation Successful ');</script>";
+
+header("location:seebookingrequest.php");
 ?>
-
 
 
 <?php

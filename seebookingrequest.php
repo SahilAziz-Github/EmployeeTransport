@@ -18,28 +18,30 @@ if(isset($_COOKIE["valid"]) && $_COOKIE["valid"]=="yes")
   width: 100%;">
   <tr>
 
-  	 <th style="border: 1px solid #ddd; padding: 8px;padding-top: 12px;padding-bottom: 12px;text-align: left;
+
+    <th style="border: 1px solid #ddd; padding: 8px;padding-top: 12px;padding-bottom: 12px;text-align: left;
   background-color: #4CAF50;
-  color: white;">Driver Name: </th>
-   
+  color: white;">User Name: </th>
     <th style="border: 1px solid #ddd; padding: 8px;padding-top: 12px;padding-bottom: 12px;text-align: left;
   background-color: #4CAF50;
   color: white;">Car Name : </th>
     <th style="border: 1px solid #ddd; padding: 8px;padding-top: 12px;padding-bottom: 12px;text-align: left;
   background-color: #4CAF50;
-  color: white;">Age:</th>
+  color: white;">Driver Name:</th>
+   <th style="border: 1px solid #ddd; padding: 8px;padding-top: 12px;padding-bottom: 12px;text-align: left;
+  background-color: #4CAF50;
+  color: white;">Departure Time:</th>
+   <th style="border: 1px solid #ddd; padding: 8px;padding-top: 12px;padding-bottom: 12px;text-align: left;
+  background-color: #4CAF50;
+  color: white;">Departure Location:</th>
+
   <th style="border: 1px solid #ddd; padding: 8px;padding-top: 12px;padding-bottom: 12px;text-align: left;
   background-color: #4CAF50;
-  color: white;">Experience:</th>
-  <th style="border: 1px solid #ddd; padding: 8px;padding-top: 12px;padding-bottom: 12px;text-align: left;
+  color: white;">Accept</th>
+
+<th style="border: 1px solid #ddd; padding: 8px;padding-top: 12px;padding-bottom: 12px;text-align: left;
   background-color: #4CAF50;
-  color: white;">Phone:</th>
-  <th style="border: 1px solid #ddd; padding: 8px;padding-top: 12px;padding-bottom: 12px;text-align: left;
-  background-color: #4CAF50;
-  color: white;">Address:</th>
-  <th style="border: 1px solid #ddd; padding: 8px;padding-top: 12px;padding-bottom: 12px;text-align: left;
-  background-color: #4CAF50;
-  color: white;">Status</th>
+  color: white;">Reject</th>
 
 
   
@@ -55,10 +57,12 @@ if(isset($_COOKIE["valid"]) && $_COOKIE["valid"]=="yes")
 <?php
 
 
+//$data=array();
 
+//$cd=array();
 include("lib.php");
 
-$jsonDATA = getJSONFromDB(" select * from driver where driverName= '".$_GET["d"]."' ");
+$jsonDATA = getJSONFromDB(" select * from booking ");
 
 $jsn=json_decode($jsonDATA);
 //include("function.php");
@@ -70,7 +74,7 @@ $i=0;
 
 foreach ($jsn as  $v) 
 { 
-  if($v->status == "valid")
+  if($v->status == "0")
   {
 
 
@@ -80,14 +84,22 @@ foreach ($jsn as  $v)
 
 
 <tr >
-    <td style="border: 1px solid #ddd; padding: 8px;"><?php  echo $v->driverName;   ?></td>
+    <td style="border: 1px solid #ddd; padding: 8px;"><?php  echo $v->userName;   ?></td>
     <td style="border: 1px solid #ddd; padding: 8px;"><?php  echo $v->carName;   ?></td>
-    <td style="border: 1px solid #ddd; padding: 8px;"><?php  echo $v->age;   ?></td>
-     <td style="border: 1px solid #ddd; padding: 8px;"><?php  echo $v->experience;   ?></td>
-      <td style="border: 1px solid #ddd; padding: 8px;"><?php  echo $v->phone;   ?></td>
-      <td style="border: 1px solid #ddd; padding: 8px;"><?php  echo $v->address;   ?></td>
-       <td style="border: 1px solid #ddd; padding: 8px;"><?php  echo $v->status;   ?></td>
+    <td style="border: 1px solid #ddd; padding: 8px;"><?php  echo $v->driverName;   ?></td>
+    <td style="border: 1px solid #ddd; padding: 8px;"><?php  echo $v->departureTime;   ?></td>
+    <td style="border: 1px solid #ddd; padding: 8px;"><?php  echo $v->departureLocation;   ?></td>
+    <td style="border: 1px solid #ddd; padding: 8px;"><a style='text-decoration:none;color:green;' href='acceptbooking.php?d=<?php echo $v->userName ; ?> ' >
+
     
+
+     Accept</a></td>
+
+	<td style="border: 1px solid #ddd; padding: 8px;"><a style='text-decoration:none;color:red;' href='rejectbooking.php?d=<?php echo $v->userName ; ?> ' >
+
+    
+
+     Reject</a></td>
      
 
  </tr>
@@ -118,8 +130,8 @@ foreach ($jsn as  $v)
 
 
 
-<a href="viewbooking.php"  style="width: 97%;background-color: #4CAF50;color: white;padding: 14px 20px;margin: 8px 0;border: none;
-   border-radius: 4px; cursor: pointer;text-align:center;text-decoration: none;float: left;">Return </a><br><br><br>
+<a href="adminhome.php"  style="width: 97%;background-color: #4CAF50;color: white;padding: 14px 20px;margin: 8px 0;border: none;
+   border-radius: 4px; cursor: pointer;text-align:center;text-decoration: none;float: left;">Return to Homepage</a><br><br><br>
 
 
 </body>
@@ -135,17 +147,3 @@ echo "<h1 style='color:red;text-align:center;'>You are not authorized to enter t
  echo "<h1 ><b style='color:black;text-align:center;'><u>Login First:</u><a  href='login.php' style='color:green;text-decoration:none;' >Go To Login Page    </a></b></h1>";
 }
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-

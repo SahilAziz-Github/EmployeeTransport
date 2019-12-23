@@ -23,7 +23,7 @@ $result = mysqli_query($connect, $query);
 if(mysqli_num_rows($result) > 0)
 {
 	$output .= '<div class="table-responsive">
-					<table class="table table bordered">
+					<table class="table table bordered" border="2px">
 						<tr>
 							<th>Driver Name:</th>
 							<th>Car Name:</th>
@@ -31,6 +31,8 @@ if(mysqli_num_rows($result) > 0)
 							<th>Experience:</th>
 							<th>Phone:</th>
 							<th>Address:</th>
+							<th>Rating: </th>
+							<th> Status:</th>
 						</tr>';
 	while($row = mysqli_fetch_array($result))
 	{
@@ -42,6 +44,8 @@ if(mysqli_num_rows($result) > 0)
 				<td>'.$row["experience"].'</td>
 				<td>'.$row["phone"].'</td>
 				<td>'.$row["address"].'</td>
+				<td>'.$row["rating"].'</td>
+				<td>'.$row["status"].'</td>
 			</tr>
 		';
 	}

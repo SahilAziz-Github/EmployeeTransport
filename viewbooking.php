@@ -40,8 +40,13 @@ if(isset($_COOKIE["valid"]) && $_COOKIE["valid"]=="yes")
 
   <th style="border: 1px solid #ddd; padding: 8px;padding-top: 12px;padding-bottom: 12px;text-align: left;
   background-color: #4CAF50;
-  color: white;">Details</th>
+  color: white;">Details:</th>
 
+  <th colspan=2 style="border: 1px solid #ddd; padding: 8px;padding-top: 12px;padding-bottom: 12px;text-align: left;
+  background-color: #4CAF50;
+  color: white;">Rate Driver:</th>
+
+  
 
   
 
@@ -90,6 +95,18 @@ foreach ($jsn as  $v)
     
 
      Details</a></td>
+
+    <td style="border: 1px solid #ddd; padding: 8px;"><a style='text-decoration:none;color:green;' href='goodrating.php?d=<?php echo $v->driverName ; ?> ' >
+
+    
+
+     Good</a></td>
+
+    <td style="border: 1px solid #ddd; padding: 8px;"><a style='text-decoration:none;color:green;' href='badrating.php?d=<?php echo $v->driverName ; ?> ' >
+
+    
+
+     Bad</a></td>
 
      
 
